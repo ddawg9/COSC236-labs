@@ -8,6 +8,7 @@ public class Order {
     
     public void addItem(MenuItem item) {
         items.add(item);
+        System.out.println("Item " + item.getName() + " added");//done by SamSH
     }
     
     public double calculateTotal() {
