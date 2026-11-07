@@ -11,6 +11,7 @@ public class Library
 
     private List<Book> catalog;
     private List<Member> members;
+    private int nextMemberId = 1;
 
     // Constructor
     public Library() {
@@ -52,7 +53,7 @@ public class Library
             return;
         }
 
-        Member member = new Member(name);
+        Member member = new Member("M" + nextMemberId++, name);
         members.add(member);
 
         System.out.println("Member registered: " + name);
